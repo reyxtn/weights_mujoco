@@ -1,0 +1,7 @@
+seeds=1 2 3 4 5 gpus=0
+epochs stand=40 walk=60 run=60 fits_per_epoch=10
+ent_coeff=0.005 std_0=0.3 init_stand=
+start_stage=walk from_sweep=/workspace/mushroom-rl/examples/environments/mujoco_warp/runs/h2_sweep_20260930_171513
+gates stand_min_ep_len=900 walk_min_ep_len=800
+extra_args=
+git=a698f651 model_build=b0614ff16e71
