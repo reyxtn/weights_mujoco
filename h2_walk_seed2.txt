@@ -1,0 +1,14 @@
+task=walk seed=2 best_epoch=60
+J=2.4653029441833496 mean_ep_len=586.09765625 lin_vel_err=0.14013072848320007 alive_frac=0.704345703125
+picked by lowest lin_vel_err with alive_frac >= 0.9 (fallback)
+stages=stand walk alg=ppo history_length=1 tf32=False
+epochs stand=40 walk=60 run=80 fits_per_epoch=10 n_envs=4096
+domain_randomization=True old_dr=True curriculum_enabled=False dr_params={'add_trunk_mass': (0.0, 0.0), 'add_com_displacement': (0.0, 0.0), 'p_gain_scale': (1.0, 1.0), 'd_gain_scale': (1.0, 1.0), 'ground_friction_factor': 0.0, 'max_delay': 0.0, 'mixed_chance': 0.0, 'position_offset': 0.0, 'reset_yaw_range': 0.0}
+privileged=['actual_delay', 'joint_calib_offset']
+gates stand_min_ep_len=200.0 walk_min_ep_len=700.0
+env_arg=[] stand_arg=[] walk_arg=[] run_arg=[]
+stage_env_args={'stand': {'push_max_vel': 0.5}, 'walk': {'alive_weight': 0.5, 'tracking_lin_vel_weight': 2.0, 'tracking_ang_vel_weight': 1.0, 'joint_deviation_weight': 0.5, 'feet_slip_weight': 1.0, 'ang_vel_xy_weight': 0.3, 'action_rate_weight': 0.03, 'push_max_vel': 0.3}, 'run': {'alive_weight': 0.5, 'tracking_lin_vel_weight': 2.0, 'tracking_ang_vel_weight': 1.0, 'feet_slip_weight': 1.0, 'action_rate_weight': 0.03}}
+curriculum={'stand': {'command_stages': (), 'command_ranges': [None], 'delay_stages': (0.3, 0.6), 'delays': [0.0, 0.01, 0.02], 'sigma_window': None, 'sigmas': None}, 'walk': {'command_stages': (0.3, 0.6), 'command_ranges': [{'lin_vel_x': (-0.3, 0.5), 'lin_vel_y': (-0.2, 0.2)}, {'lin_vel_x': (-0.5, 0.8), 'lin_vel_y': (-0.3, 0.3)}, {'lin_vel_x': (-0.6, 1.0), 'lin_vel_y': (-0.4, 0.4)}], 'delay_stages': (0.3, 0.6), 'delays': [0.0, 0.01, 0.02], 'sigma_window': (0.1, 0.5), 'sigmas': (0.5, 0.25)}, 'run': {'command_stages': (0.3, 0.6), 'command_ranges': [{'lin_vel_x': (1.0, 1.5), 'lin_vel_y': (-0.2, 0.2)}, {'lin_vel_x': (1.0, 2.2), 'lin_vel_y': (-0.3, 0.3)}, {'lin_vel_x': (1.0, 3.0), 'lin_vel_y': (-0.3, 0.3)}], 'delay_stages': (0.3, 0.6), 'delays': [0.0, 0.01, 0.02], 'sigma_window': (0.1, 0.5), 'sigmas': (0.5, 0.25)}}
+std_0=0.3 ent_coeff=0.005 actor_lr=0.0003 critic_lr=0.0003
+git=af7fed6b
+source=/workspace/mushroom-rl/runs/exact_old/seed_2/walk.msh
