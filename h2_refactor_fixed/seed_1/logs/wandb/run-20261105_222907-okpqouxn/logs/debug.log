@@ -1,0 +1,41 @@
+2026-11-05 22:29:07,783 INFO    MainThread:6033 [wandb_init.py:setup_run_log_directory():740] Logging user logs to runs/h2_refactor_fixed/seed_1/logs/wandb/run-20261105_222907-okpqouxn/logs/debug.log
+2026-11-05 22:29:07,784 INFO    MainThread:6033 [wandb_init.py:setup_run_log_directory():741] Logging internal logs to runs/h2_refactor_fixed/seed_1/logs/wandb/run-20261105_222907-okpqouxn/logs/debug-internal.log
+2026-11-05 22:29:07,784 INFO    MainThread:6033 [wandb_init.py:init():784] calling init triggers
+2026-11-05 22:29:07,784 INFO    MainThread:6033 [wandb_init.py:init():789] wandb.init called with sweep_config: {}
+config: {'stage': 'run', 'seed': 1, 'init_agent': 'runs/h2_refactor_fixed/seed_1/walk.msh', 'n_envs': 4096, 'n_epochs': 80, 'n_steps_per_fit': 98304, 'batch_size': 6144, 'alg': 'ppo', 'history_length': 1, 'privileged': ['actual_delay', 'joint_calib_offset'], 'tf32': True, 'domain_randomization': True, 'dr_params': {'add_trunk_mass': (-2.0, 6.0), 'add_com_displacement': (-0.03, 0.03), 'p_gain_scale': (0.85, 1.15), 'd_gain_scale': (0.85, 1.15), 'ground_friction_factor': 0.5555555555555556, 'max_delay': 0.02, 'mixed_chance': 0.0, 'position_offset': 0.02, 'reset_yaw_range': 3.141592653589793, 'reset_joint_noise': 0.1, 'reset_base_velocity': 0.2, 'joint_stiffness': (0.0, 0.0)}, 'env_kwargs': {}, 'reward_weights': {'alive': 0.5, 'tracking_lin_vel': 2.0, 'tracking_ang_vel': 1.0, 'feet_slip': -1.0, 'action_rate': -0.03}, 'reward_params': {}, 'curriculum': {'command_steps': (0.3, 0.6), 'command_ranges': [{'lin_vel_x': (1.0, 1.5), 'lin_vel_y': (-0.2, 0.2)}, {'lin_vel_x': (1.0, 2.2), 'lin_vel_y': (-0.3, 0.3)}, {'lin_vel_x': (1.0, 3.0), 'lin_vel_y': (-0.3, 0.3)}], 'delays': [0.0, 0.01, 0.02], 'delay_steps': (0.3, 0.6), 'tracking_steps': None, 'tracking_stds': None}, 'curriculum_enabled': True, 'actor_lr': 0.0003, 'critic_lr': 0.0003, 'std_0': 0.3, 'ent_coeff': 0.005, 'n_epochs_critic': 1, '_wandb': {}}
+2026-11-05 22:29:07,784 INFO    MainThread:6033 [wandb_init.py:init():832] starting backend
+2026-11-05 22:29:07,784 INFO    MainThread:6033 [wandb_init.py:init():847] sending inform_init request
+2026-11-05 22:29:07,785 INFO    MainThread:6033 [wandb_init.py:init():852] backend started and connected
+2026-11-05 22:29:07,785 INFO    MainThread:6033 [wandb_init.py:init():922] updated telemetry
+2026-11-05 22:29:07,790 INFO    MainThread:6033 [wandb_init.py:init():940] communicating run to backend with 90.0 second timeout
+2026-11-05 22:29:08,402 INFO    MainThread:6033 [wandb_init.py:init():977] starting run threads in backend
+2026-11-05 22:29:08,440 INFO    MainThread:6033 [wandb_run.py:_console_start():2528] atexit reg
+2026-11-05 22:29:08,440 INFO    MainThread:6033 [wandb_run.py:_redirect():2378] redirect: wrap_raw
+2026-11-05 22:29:08,440 INFO    MainThread:6033 [wandb_run.py:_redirect():2447] Wrapping output streams.
+2026-11-05 22:29:08,440 INFO    MainThread:6033 [wandb_run.py:_redirect():2470] Redirects installed.
+2026-11-05 22:29:08,441 INFO    MainThread:6033 [wandb_init.py:init():1015] run started, returning control to user process
+2026-11-05 22:39:42,204 INFO    wandb-AsyncioManager-main:6033 [service_client.py:_forward_responses():122] [no run ID] Reached EOF.
+2026-11-05 22:39:42,204 INFO    wandb-AsyncioManager-main:6033 [mailbox.py:close():154] [no run ID] Closing mailbox, abandoning 1 handles.
+2026-11-05 22:39:42,205 ERROR   wandb-AsyncioManager-main:6033 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/venv/h2-warp/lib/python3.11/site-packages/wandb/sdk/lib/asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "/venv/h2-warp/lib/python3.11/site-packages/wandb/sdk/lib/run_messages.py", line 90, in loop
+    await asyncio_compat.race(
+  File "/venv/h2-warp/lib/python3.11/site-packages/wandb/sdk/lib/asyncio_compat.py", line 279, in race
+    async with open_task_group(race=True) as tg:
+  File "/venv/h2-warp/lib/python3.11/contextlib.py", line 217, in __aexit__
+    await anext(self.gen)
+  File "/venv/h2-warp/lib/python3.11/site-packages/wandb/sdk/lib/asyncio_compat.py", line 241, in open_task_group
+    await task_group._wait_all(race=race, timeout=exit_timeout)
+  File "/venv/h2-warp/lib/python3.11/site-packages/wandb/sdk/lib/asyncio_compat.py", line 181, in _wait_all
+    raise exc
+  File "/venv/h2-warp/lib/python3.11/site-packages/wandb/sdk/lib/run_messages.py", line 113, in _print_all
+    result = await handle.wait_async(timeout=None)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/h2-warp/lib/python3.11/site-packages/wandb/sdk/mailbox/mailbox_handle.py", line 127, in wait_async
+    response = await self._handle.wait_async(timeout=timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/h2-warp/lib/python3.11/site-packages/wandb/sdk/mailbox/response_handle.py", line 123, in wait_async
+    raise HandleAbandonedError()
+wandb.sdk.mailbox.mailbox_handle.HandleAbandonedError

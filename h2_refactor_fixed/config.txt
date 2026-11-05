@@ -1,0 +1,10 @@
+stages=stand walk run alg=ppo history_length=1 tf32=True
+epochs stand=80 walk=120 run=80 fits_per_epoch=10 n_envs=4096 n_epochs_critic=1
+domain_randomization=True old_dr=False curriculum_enabled=True dr_params={'add_trunk_mass': (-2.0, 6.0), 'add_com_displacement': (-0.03, 0.03), 'p_gain_scale': (0.85, 1.15), 'd_gain_scale': (0.85, 1.15), 'ground_friction_factor': 0.5555555555555556, 'max_delay': 0.02, 'mixed_chance': 0.0, 'position_offset': 0.02, 'reset_yaw_range': 3.141592653589793, 'reset_joint_noise': 0.1, 'reset_base_velocity': 0.2, 'joint_stiffness': (0.0, 0.0)}
+privileged=['actual_delay', 'joint_calib_offset']
+gates stand_min_ep_len=200.0 walk_min_ep_len=700.0
+env_arg=[] stand_arg=[] walk_arg=[] run_arg=[]
+stage_reward_weights={'stand': {}, 'walk': {'alive': 0.5, 'tracking_lin_vel': 2.0, 'tracking_ang_vel': 1.0, 'joint_deviation': -0.5, 'feet_slip': -1.0, 'ang_vel_xy': -0.3, 'action_rate': -0.03}, 'run': {'alive': 0.5, 'tracking_lin_vel': 2.0, 'tracking_ang_vel': 1.0, 'feet_slip': -1.0, 'action_rate': -0.03}} stage_reward_params={'stand': {}, 'walk': {'feet_air_time_threshold': 0.25}, 'run': {}} stage_pushes={'stand': {'push_max_velocity': 0.5}, 'walk': {'push_max_velocity': 0.3}, 'run': {}}
+curriculum={'stand': {'command_steps': (), 'command_ranges': [None], 'delays': [0.0, 0.01, 0.02], 'delay_steps': (0.3, 0.6), 'tracking_steps': None, 'tracking_stds': None}, 'walk': {'command_steps': (0.3, 0.6), 'command_ranges': [{'lin_vel_x': (-0.3, 0.5), 'lin_vel_y': (-0.2, 0.2)}, {'lin_vel_x': (-0.5, 0.8), 'lin_vel_y': (-0.3, 0.3)}, {'lin_vel_x': (-0.6, 1.0), 'lin_vel_y': (-0.4, 0.4)}], 'delays': [0.0, 0.01, 0.02], 'delay_steps': (0.3, 0.6), 'tracking_steps': (0.1, 0.5), 'tracking_stds': ({'sigma': 0.5}, {'sigma': 0.25})}, 'run': {'command_steps': (0.3, 0.6), 'command_ranges': [{'lin_vel_x': (1.0, 1.5), 'lin_vel_y': (-0.2, 0.2)}, {'lin_vel_x': (1.0, 2.2), 'lin_vel_y': (-0.3, 0.3)}, {'lin_vel_x': (1.0, 3.0), 'lin_vel_y': (-0.3, 0.3)}], 'delays': [0.0, 0.01, 0.02], 'delay_steps': (0.3, 0.6), 'tracking_steps': None, 'tracking_stds': None}}
+std_0=0.3 ent_coeff=0.005 actor_lr=0.0003 critic_lr=0.0003
+git=c1605fcf
