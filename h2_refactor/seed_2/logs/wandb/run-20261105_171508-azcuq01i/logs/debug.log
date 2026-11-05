@@ -1,0 +1,21 @@
+2026-11-05 17:15:08,313 INFO    MainThread:3560 [wandb_init.py:setup_run_log_directory():740] Logging user logs to runs/h2_refactor/seed_2/logs/wandb/run-20261105_171508-azcuq01i/logs/debug.log
+2026-11-05 17:15:08,313 INFO    MainThread:3560 [wandb_init.py:setup_run_log_directory():741] Logging internal logs to runs/h2_refactor/seed_2/logs/wandb/run-20261105_171508-azcuq01i/logs/debug-internal.log
+2026-11-05 17:15:08,313 INFO    MainThread:3560 [wandb_init.py:init():784] calling init triggers
+2026-11-05 17:15:08,313 INFO    MainThread:3560 [wandb_init.py:init():789] wandb.init called with sweep_config: {}
+config: {'stage': 'run', 'seed': 2, 'init_agent': 'runs/h2_refactor/seed_2/walk.msh', 'n_envs': 4096, 'n_epochs': 80, 'n_steps_per_fit': 98304, 'batch_size': 6144, 'alg': 'ppo', 'history_length': 1, 'privileged': ['actual_delay', 'joint_calib_offset'], 'tf32': True, 'domain_randomization': True, 'dr_params': {'add_trunk_mass': (-2.0, 6.0), 'add_com_displacement': (-0.03, 0.03), 'p_gain_scale': (0.85, 1.15), 'd_gain_scale': (0.85, 1.15), 'ground_friction_factor': 0.5555555555555556, 'max_delay': 0.02, 'mixed_chance': 0.0, 'position_offset': 0.02, 'reset_yaw_range': 3.141592653589793, 'reset_joint_noise': 0.1, 'reset_base_velocity': 0.2, 'joint_stiffness': (0.0, 0.0)}, 'env_kwargs': {}, 'reward_weights': {'alive': 0.5, 'tracking_lin_vel': 2.0, 'tracking_ang_vel': 1.0, 'feet_slip': -1.0, 'action_rate': -0.03}, 'reward_params': {}, 'curriculum': {'command_steps': (0.3, 0.6), 'command_ranges': [{'lin_vel_x': (1.0, 1.5), 'lin_vel_y': (-0.2, 0.2)}, {'lin_vel_x': (1.0, 2.2), 'lin_vel_y': (-0.3, 0.3)}, {'lin_vel_x': (1.0, 3.0), 'lin_vel_y': (-0.3, 0.3)}], 'delays': [0.0, 0.01, 0.02], 'delay_steps': (0.3, 0.6), 'tracking_steps': None, 'tracking_stds': None}, 'curriculum_enabled': True, 'actor_lr': 0.0003, 'critic_lr': 0.0003, 'std_0': 0.3, 'ent_coeff': 0.005, 'n_epochs_critic': 1, '_wandb': {}}
+2026-11-05 17:15:08,313 INFO    MainThread:3560 [wandb_init.py:init():832] starting backend
+2026-11-05 17:15:08,313 INFO    MainThread:3560 [wandb_init.py:init():847] sending inform_init request
+2026-11-05 17:15:08,314 INFO    MainThread:3560 [wandb_init.py:init():852] backend started and connected
+2026-11-05 17:15:08,314 INFO    MainThread:3560 [wandb_init.py:init():922] updated telemetry
+2026-11-05 17:15:08,318 INFO    MainThread:3560 [wandb_init.py:init():940] communicating run to backend with 90.0 second timeout
+2026-11-05 17:15:09,041 INFO    MainThread:3560 [wandb_init.py:init():977] starting run threads in backend
+2026-11-05 17:15:09,077 INFO    MainThread:3560 [wandb_run.py:_console_start():2528] atexit reg
+2026-11-05 17:15:09,077 INFO    MainThread:3560 [wandb_run.py:_redirect():2378] redirect: wrap_raw
+2026-11-05 17:15:09,077 INFO    MainThread:3560 [wandb_run.py:_redirect():2447] Wrapping output streams.
+2026-11-05 17:15:09,077 INFO    MainThread:3560 [wandb_run.py:_redirect():2470] Redirects installed.
+2026-11-05 17:15:09,077 INFO    MainThread:3560 [wandb_init.py:init():1015] run started, returning control to user process
+2026-11-05 17:43:44,606 INFO    MainThread:3560 [wandb_run.py:_finish():2300] finishing run needy-logger-overfit/mushroom_rl_h2/azcuq01i
+2026-11-05 17:43:44,606 INFO    MainThread:3560 [wandb_run.py:_atexit_cleanup():2495] got exitcode: 0
+2026-11-05 17:43:44,606 INFO    MainThread:3560 [wandb_run.py:_restore():2477] restore
+2026-11-05 17:43:44,606 INFO    MainThread:3560 [wandb_run.py:_restore():2483] restore done
+2026-11-05 17:43:46,543 INFO    MainThread:3560 [wandb_run.py:_footer_sync_info():3908] logging synced files

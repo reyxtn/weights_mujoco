@@ -1,0 +1,53 @@
+{
+  "os":  "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+  "python":  "CPython 3.11.15",
+  "startedAt":  "2026-11-05T16:06:18.307957Z",
+  "args":  [
+    "--seed",
+    "2",
+    "--tf32",
+    "--eval-every",
+    "5",
+    "--run-dir",
+    "runs/h2_refactor"
+  ],
+  "program":  "/workspace/mushroom-rl/examples/environments/mujoco_warp/h2_curriculum.py",
+  "codePath":  "examples/environments/mujoco_warp/h2_curriculum.py",
+  "codePathLocal":  "examples/environments/mujoco_warp/h2_curriculum.py",
+  "git":  {
+    "remote":  "https://github.com/reyxtn/mushroom-rl.git",
+    "commit":  "64b8484d51614298cbfb95ef46fff6b16bbc6c74"
+  },
+  "email":  "re4747gi-s@student.lu.se",
+  "root":  "runs/h2_refactor/seed_2/logs",
+  "host":  "b05fd3a8da0d",
+  "executable":  "/venv/h2-warp/bin/python",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "gpu":  "NVIDIA GeForce RTX 5090",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "42949672960",
+      "used":  "11654070272"
+    }
+  },
+  "memory":  {
+    "total":  "32707731456"
+  },
+  "cpu":  {
+    "model":  "AMD Ryzen 7 7800X3D 8-Core Processor"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 5090",
+      "memoryTotal":  "34190917632",
+      "cudaCores":  21760,
+      "architecture":  "Blackwell",
+      "uuid":  "GPU-2cebdd50-162b-4c8a-513d-fe8bf505f2df",
+      "pciBusId":  "00000000:01:00.0"
+    }
+  ],
+  "cudaVersion":  "13.0",
+  "writerId":  "01a1ac76-05c5-7793-8e00-4e4d2bdb55b0"
+}

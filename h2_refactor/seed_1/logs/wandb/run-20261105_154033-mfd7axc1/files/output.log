@@ -1,0 +1,4 @@
+seed 1 run:  90%|███████████████████████████▉   | 72/80 [22:20<02:19, 17.43s/it]                                                                                      Transient error Service Unavailable encountered while exporting metrics batch, retrying in 1.00s.
+                                                                                ████████████████████████████████▋          | 897024/983040 [00:14<00:01, 52089.46it/s]
+                                                                                                                                                                      
+[curriculum] run done: best epoch 65 J=3.863 ep_len=945.3 lin_vel_err=0.319 alive=0.902 -> runs/h2_refactor/seed_1/run.msh
