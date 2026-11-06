@@ -1,4 +1,0 @@
-seed 3 walk:  62%|█████████████████▉           | 74/120 [26:44<13:08, 17.14s/it]                                                                                      Transient error Service Unavailable encountered while exporting metrics batch, retrying in 1.06s.
-                                                                                                                                     | 47/256 [00:10<00:55,  3.76it/s]
-                                                                                                                                                                      
-[curriculum] walk done: best epoch 120 J=3.009 ep_len=859.8 lin_vel_err=0.255 alive=0.711 -> runs/h2_refactor/seed_3/walk.msh
